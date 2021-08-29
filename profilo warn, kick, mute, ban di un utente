@@ -1,0 +1,20 @@
+$nomention
+$title[Scheda di $username[$mentioned[<;yes]]]
+$description[$if[$isAdmin[$mentioned[<;yes]]==true] 
+**Scheda Admin**
+Kick fatti: $numberSeparator[$getUserVar[kick fatti;$mentioned[<;yes]]]
+Ban fatti: $numberSeparator[$getUserVar[ban fatti;$mentioned[<;yes]]]
+Warn fatti: $numberSeparator[$getUserVar[warn fatti;$mentioned[<;yes]]]
+Mute fatti:
+$numberSeparator[$getUserVar[mute fatti;$mentioned[<;yes]]]
+$endif
+
+$if[$isAdmin[$mentioned[<;yes]]==false]
+**Scheda Utente**
+Warn subiti: $numberSeparator[$getUserVar[warn;$mentioned[<;yes]]]
+Kick subiti: $numberSeparator[$getUserVar[kick;$mentioned[<;yes]]]
+Ban subiti: $numberSeparator[$getUserVar[ban;$mentioned[<;yes]]]
+Mute subiti
+$numberSeparator[$getUserVar[mute;$mentioned[<;yes]]]
+$endif]
+$footer[Requested by $username#$discriminator[$authorID]]
